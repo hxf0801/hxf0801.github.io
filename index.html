@@ -2,12 +2,14 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>LifeStyle</title>
+<title>hxf0801&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
+<link href="/zh-cn/index.html" rel="alternate" hreflang="zh-CN">
+    
 
 
 
@@ -60,7 +62,9 @@
         <div class="navbar-brand">
             <a class="navbar-item navbar-logo" href="/">
                 
+                    
                     LifeStyle
+                    
                 
             </a>
             <div class="navbar-burger">
@@ -72,9 +76,9 @@
         
         <div class="navbar-menu navbar-start">
             
-            <a class="navbar-item " href="/categories/blog">Blog</a>
-            
             <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/blog">Docs</a>
             
             <a class="navbar-item " href="/about">About</a>
             
@@ -101,6 +105,59 @@
 
     <section class="section">
     <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/05/11/jbpm-kjar-deployment-descriptor/" itemprop="url">jbpm_kjar_deployment_descriptor</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-11T16:07:10.000Z" itemprop="datePublished">May 11 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/blog/">blog</a><span>></span><a class="article-category-link" href="/categories/blog/jbpm/">jbpm</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 277 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><h3 id="deployment-descriptor"><a href="#deployment-descriptor" class="headerlink" title="deployment descriptor"></a>deployment descriptor</h3><p>which should be used, <em>kie-deployment-descriptor.xml</em> or <em>kie-wb-deployment-descriptor.xml</em>?</p>
+<p><strong>project level kie-deployment-descriptor.xml; application level kie-wb-deployment-descriptor.xml.</strong> application level is for all projects. In my point of view, project level is kjar, application level is war or ear.</p>
+<p>The deployment descriptor allow you to define descriptors to each deployment items to get fine grained control. Generally, the file is called <em><strong>kie-deployment-descriptor.xml</strong></em> and you should place this file next to your <em>kmodule.xml</em> file in the META-INF folder. You can change this default location (and the filename) by specifying it as a system parameter:<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Dorg.kie.deployment.desc.location=file:/path/to/file/company-deployment-descriptor.xml</span><br></pre></td></tr></table></figure></p>
+<p>These descriptors allow you to configure the execution server on multiple levels (server level default, different deployment descriptor per kjar and so on). </p>
+<p>Deployment descriptors allow the user to configure the execution server on multiple levels:</p>
+<ul>
+<li>server level: the main level and the one that applies to all kjars deployed on the server.</li>
+<li>kjar level: this allows you to configure descriptors on a per kjar basis.</li>
+<li>deploy time level: descriptors that apply while a kjar is being deployed.</li>
+</ul>
+<p>The hierarchy works like this: deploy time configuration &gt; kjar configuration &gt; server configuration</p>
+<h4 id="noteworthy-article"><a href="#noteworthy-article" class="headerlink" title="noteworthy article"></a>noteworthy article</h4><p><a href="https://access.redhat.com/documentation/en-us/red_hat_jboss_bpm_suite/6.1/html/administration_and_configuration_guide/sect-deployment_descriptors" target="_blank" rel="noopener">https://access.redhat.com/documentation/en-us/red_hat_jboss_bpm_suite/6.1/html/administration_and_configuration_guide/sect-deployment_descriptors</a></p>
+<h3 id="some-articles"><a href="#some-articles" class="headerlink" title="some articles"></a>some articles</h3><p><a href="http://mswiderski.blogspot.com/2014/" target="_blank" rel="noopener">http://mswiderski.blogspot.com/2014/</a></p>
+<h3 id="Overview-of-jBPM"><a href="#Overview-of-jBPM" class="headerlink" title="Overview of jBPM"></a>Overview of jBPM</h3><p><a href="http://mswiderski.blogspot.com/2014/12/keep-your-jbpm-environment-healthy.html" target="_blank" rel="noopener">http://mswiderski.blogspot.com/2014/12/keep-your-jbpm-environment-healthy.html</a></p>
+<p><a href="http://mswiderski.blogspot.com/2014/11/cross-framework-services-in-jbpm-62.html" target="_blank" rel="noopener">http://mswiderski.blogspot.com/2014/11/cross-framework-services-in-jbpm-62.html</a></p>
+<h3 id="jbpm-integration-with-Spring"><a href="#jbpm-integration-with-Spring" class="headerlink" title="jbpm integration with Spring"></a>jbpm integration with Spring</h3><p><a href="http://mswiderski.blogspot.com/2014/01/jbpm-6-with-spring.html" target="_blank" rel="noopener">http://mswiderski.blogspot.com/2014/01/jbpm-6-with-spring.html</a></p>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
     
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
@@ -156,6 +213,35 @@
             <div class="column is-hidden-mobile"></div>
 
             
+<div class="column is-narrow has-text-centered">
+    <div class="dropdown is-up is-right is-hoverable" style="margin-top: -0.2em;">
+        <div class="dropdown-trigger">
+            <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu7">
+                <span class="icon">
+                    <i class="fas fa-globe"></i>
+                </span>
+                <span>English</span>
+                <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+            </button>
+        </div>
+        <div class="dropdown-menu has-text-left" role="menu">
+            <div class="dropdown-content">
+            
+                <a href="/index.html" class="dropdown-item">
+                    English
+                </a>
+            
+                <a href="/zh-cn/index.html" class="dropdown-item">
+                    简体中文
+                </a>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
         </div>
     </div>
 </footer>
