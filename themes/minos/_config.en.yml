@@ -1,0 +1,6 @@
+# Navigation bar menu links.
+menu:
+  Archives: /archives
+  Categories: /categories
+  Tags: /tags
+  About: /about
