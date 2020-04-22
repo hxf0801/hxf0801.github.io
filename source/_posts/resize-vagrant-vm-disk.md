@@ -15,7 +15,7 @@ How to increase the size of the disk for existing VirtualBox machine? Use vagran
 
 1. install vagrant plugin **vagrant-disksize**
 
-2. add new disk size to 100G configuration to Vagrantfile. Note the position
+2. add new disk size to 100G configuration to [Vagrantfile](./resize-vagrant-vm-disk/Vagrantfile). Note the position
 ```
 ...
 config.vm.box = "ol7-latest"
