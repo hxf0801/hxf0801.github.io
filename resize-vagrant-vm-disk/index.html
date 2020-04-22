@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
 <title>resize vagrant vm disk - hxf0801&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -127,7 +127,7 @@
         <span class="column is-narrow">
             
             
-            19 minutes read (About 2804 words)
+            19 minutes read (About 2809 words)
         </span>
         
     </div>
@@ -138,7 +138,7 @@
 <ol>
 <li><p>install vagrant plugin <strong>vagrant-disksize</strong></p>
 </li>
-<li><p>add new disk size to 100G configuration to Vagrantfile. Note the position</p>
+<li><p>add new disk size to 100G configuration to <a href="./resize-vagrant-vm-disk/Vagrantfile">Vagrantfile</a>. Note the position</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">config.vm.box = &quot;ol7-latest&quot;</span><br><span class="line">config.disksize.size = &quot;100GB&quot;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>run <code>vagrant up</code> to create vm<br><code>vagrant ssh</code> to vm, to create new partition with the new space. otherwise we can’t see the new-added space, and only see the box’s original disk size 40G</p>
@@ -217,9 +217,9 @@
     
     <div class="columns is-variable is-1 is-multiline is-mobile">
     
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/VirtualBox/">#VirtualBox</a></span>
-    
         <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/vagrant/">#vagrant</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/VirtualBox/">#VirtualBox</a></span>
     
         <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/vm/">#vm</a></span>
     
@@ -227,7 +227,9 @@
     
     
     <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/vagrant-oracle/">vagrant oracle</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
